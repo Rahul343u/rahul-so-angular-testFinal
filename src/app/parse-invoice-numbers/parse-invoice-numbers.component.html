@@ -1,0 +1,30 @@
+<div class="container">
+  <h3>Please upload the file.</h3>
+
+  <div class="form-group">
+    <input type="file" id="file" name="file" (change)="uploadFile($event)" />
+  </div>
+  <span>Input File</span>
+  <textarea
+    name="Input File"
+    placeholder="Input File"
+    id=""
+    cols="5"
+    rows="5"
+    [(ngModel)]="data"
+    class="form-control"
+  ></textarea>
+  <br />
+  <button class="btn btn-primary" (click)="get7segment()">Submit</button> <br />
+  <br />
+  <span>Output File</span>
+  <textarea
+    name="Input File"
+    placeholder="Output File"
+    id=""
+    cols="5"
+    rows="5"
+    [(ngModel)]="res"
+    class="form-control"
+  ></textarea>
+</div>

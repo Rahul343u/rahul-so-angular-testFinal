@@ -1,27 +1,44 @@
 # So
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
+use npm install command to install node_modules
 
-## Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Question 1
+What is the difference between imports, declarations, and providers?
 
-## Code scaffolding
+imports: is used to import supporting modules likes FormsModule, RouterModule, CommonModule,
+or any other custom-made feature module.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+declarations: is used to declare components, directives, pipes that belongs to the current module.
+Everything inside declarations knows each other. For example, if we have a component, say UsernameComponent,
+which display list of the usernames, and we also have a pipe, say toupperPipe, which transform string to uppercase
+letter string. Now If we want to show usernames in uppercase letters in our UsernameComponent, we can use the
+toupperPipe which we had created before but how UsernameComponent know that the toupperPipe exist and how we
+can access and use it, here comes the declarations, we can declare UsernameComponent and toupperPipe.
 
-## Build
+Providers: is used to inject the services required by components, directives, pipes in our module.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Question 2
+What is the difference between components, directives, models, modules, and services?
 
-## Running unit tests
+components:
+components are simply classes that are designated as a component with the help of a component decorator.
+Every component has a defined template which can communicate with the code defined in the component class.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+directives :
+Directives in angular is use for dom manipulation.
+there are two types of directive
+Structural directives—change the DOM layout by adding and removing DOM elements.
+Attribute directives—change the appearance or behavior of an element, component, or another directive.
 
-## Running end-to-end tests
+models:
+models in angular is used to structure data variables in proper way.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+modules:
+In Angular, a module is a mechanism to group components, directives, pipes and services that are related,
+in such a way that can be combined with other modules to create an application.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+services:
+Services are mainly a way to communicate between controllers, but you can inject one service into another.
+Services are often used as a way to get to our data stored.
